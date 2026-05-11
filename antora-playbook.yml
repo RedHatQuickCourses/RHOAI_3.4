@@ -1,6 +1,6 @@
 site:
-  title: FIXME Course Title
-  start_page: REPLACEREPONAME::index.adoc
+  title: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features
+  start_page: RHOAI_3.4::index.adoc
 
 content:
   sources:
