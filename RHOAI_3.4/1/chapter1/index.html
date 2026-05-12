@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>High-Performance Inference :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <link rel="prev" href="../index.html">
+    <link rel="next" href="section1.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/collapsible.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/reading-time.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="RHOAI_3.4" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">High-Performance Inference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section1.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section2.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section3.html">Speculative Decoding (General Availability)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chapter2/index.html">Data-Centric AI &amp; Evaluation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section2.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section3.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chapter3/index.html">The Agentic Era (AgentOps)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section1.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#index.adoc">index.adoc</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#section1.adoc">section1.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#section2.adoc">section2.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#section3.adoc">section3.adoc</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></li>
+    <li><a href="index.html">High-Performance Inference</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">High-Performance Inference</h1>
+<div class="sect1">
+<h2 id="_model_as_a_service_maas_integration_general_availability"><a class="anchor" href="#_model_as_a_service_maas_integration_general_availability"></a>Model-as-a-Service (MaaS) Integration (General Availability)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>What is it?</strong></p>
+</div>
+<div class="paragraph">
+<p>MaaS is a subscription-based governance platform and AI gateway that acts as a centralized policy enforcement layer between users and model serving infrastructure. In OpenShift AI 3.4, the platform has transitioned to a subscription-based model for access control (replacing the previous tier-based model), allowing models to be delivered as shared resources via managed API endpoints without modifying underlying components.</p>
+</div>
+<div class="paragraph">
+<p><strong>Why does it matter?</strong></p>
+</div>
+<div class="paragraph">
+<p>As AI adoption scales across an enterprise, managing resource consumption and user access becomes complex. MaaS addresses these challenges through:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Subscription-based access control</strong>: Granting specific groups access to models with configurable token limits and priority levels for users with multiple subscriptions.</p>
+</li>
+<li>
+<p><strong>External models (Technology Preview)</strong>: The ability to route inference requests to external providers such as AWS Bedrock, Azure OpenAI, or Google Vertex AI through the unified MaaS gateway.</p>
+</li>
+<li>
+<p><strong>External OIDC authentication (Technology Preview)</strong>: Integration with identity providers like Azure AD, Okta, or Keycloak to enable enterprise access without requiring local OpenShift accounts.</p>
+</li>
+<li>
+<p><strong>Self-service API key management</strong>: Improving developer agility by allowing users to create, list, and revoke their own API keys (permanent or with custom expiration).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>How to use it?</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Administrators</strong>: Deploy MaaS via the RHOAI Operator and configure subscriptions using custom resources. Use the MaaS observability dashboard (TP) to monitor token consumption, track rate limit violations, and export usage data in CSV format for showback reporting.</p>
+</li>
+<li>
+<p><strong>Users/Developers</strong>: Access the self-service interface to generate API keys and make standard OpenAI-compatible API calls to models served via llm-d or vLLM (TP) runtimes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></span>
+  <span class="next"><a href="section1.html">Distributed Inference with llm-d on xKS (Technology Preview)</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script defer src="../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../_/js/vendor/reading-time.js"></script>
+  </body>
+</html>

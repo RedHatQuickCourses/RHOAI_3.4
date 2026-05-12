@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Distributed Inference with llm-d on xKS (Technology Preview) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <link rel="prev" href="index.html">
+    <link rel="next" href="section2.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/collapsible.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/reading-time.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="RHOAI_3.4" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">High-Performance Inference</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="section1.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section2.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section3.html">Speculative Decoding (General Availability)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chapter2/index.html">Data-Centric AI &amp; Evaluation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section2.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section3.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../chapter3/index.html">The Agentic Era (AgentOps)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section1.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#index.adoc">index.adoc</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#section1.adoc">section1.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#section2.adoc">section2.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#section3.adoc">section3.adoc</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></li>
+    <li><a href="index.html">High-Performance Inference</a></li>
+    <li><a href="section1.html">Distributed Inference with llm-d on xKS (Technology Preview)</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Distributed Inference with llm-d on xKS (Technology Preview)</h1>
+<div class="paragraph">
+<p><strong>What is it?</strong></p>
+</div>
+<div class="paragraph">
+<p>This feature extends enterprise-grade LLM inference serving beyond OpenShift to managed Kubernetes clusters on public clouds, specifically Azure Kubernetes Service (AKS) and CoreWeave Kubernetes Service (CKS). It allows for production-scale generative AI inference on any CNCF-certified cluster using standard Kubernetes tools like Helm charts and kubectl, rather than relying on the OpenShift Operator Lifecycle Manager (OLM).</p>
+</div>
+<div class="paragraph">
+<p><strong>Why does it matter?</strong></p>
+</div>
+<div class="paragraph">
+<p>It provides "Architecture Freedom," enabling teams to serve massive foundation models without vendor lock-in to OpenShift-only deployment methods. Technical pillars include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prefill-decode Disaggregation: Separates prompt processing from token generation, allowing each phase to scale independently for optimal performance.</p>
+</li>
+<li>
+<p>Intelligent Scheduling &amp; KV Cache Management: Optimizes resource usage and reduces memory requirements, enabling much longer context windows.</p>
+</li>
+<li>
+<p>Wide Expert Parallelism: Efficiently handles Mixture of Experts (MoE) models across many GPU nodes.</p>
+</li>
+<li>
+<p>Secure by Design: Inter-component communication is secured using mTLS with certificate rotation, with all components running under minimal required permissions.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>How to use it?</strong></p>
+</div>
+<div class="paragraph">
+<p>Deploy the inference stack using Helm charts distributed as OCI container images from Deploy the inference stack using Helm charts distributed as OCI container images from <strong>quay.io/opendatahub/rhaii-helm-chart</strong>. The solution utilizes a modern stack including KServe for lifecycle management, Istio for service mesh security, LeaderWorkerSet for pod topology coordination, and the Gateway API for intelligent request routing.</p>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">High-Performance Inference</a></span>
+  <span class="next"><a href="section2.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script defer src="../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../_/js/vendor/reading-time.js"></script>
+  </body>
+</html>
