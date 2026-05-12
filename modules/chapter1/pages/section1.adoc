@@ -1,6 +1,20 @@
-= Section 1
+= Distributed Inference with llm-d on xKS (Technology Preview)
 
-* Create multiple copies of this section as needed.
-* Remove any unnecessary sections or chapter pages.
-* Customize the section as appropriate.
-* Ensure that each page contains a manageable amount of content.
+*What is it?*
+
+This feature extends enterprise-grade LLM inference serving beyond OpenShift to managed Kubernetes clusters on public clouds, specifically Azure Kubernetes Service (AKS) and CoreWeave Kubernetes Service (CKS). It allows for production-scale generative AI inference on any CNCF-certified cluster using standard Kubernetes tools like Helm charts and kubectl, rather than relying on the OpenShift Operator Lifecycle Manager (OLM).
+
+*Why does it matter?*
+
+It provides "Architecture Freedom," enabling teams to serve massive foundation models without vendor lock-in to OpenShift-only deployment methods. Technical pillars include:
+
+- Prefill-decode Disaggregation: Separates prompt processing from token generation, allowing each phase to scale independently for optimal performance.
+- Intelligent Scheduling & KV Cache Management: Optimizes resource usage and reduces memory requirements, enabling much longer context windows.
+- Wide Expert Parallelism: Efficiently handles Mixture of Experts (MoE) models across many GPU nodes.
+- Secure by Design: Inter-component communication is secured using mTLS with certificate rotation, with all components running under minimal required permissions.
+
+*How to use it?*
+
+Deploy the inference stack using Helm charts distributed as OCI container images from Deploy the inference stack using Helm charts distributed as OCI container images from *quay.io/opendatahub/rhaii-helm-chart*. The solution utilizes a modern stack including KServe for lifecycle management, Istio for service mesh security, LeaderWorkerSet for pod topology coordination, and the Gateway API for intelligent request routing.
+
+

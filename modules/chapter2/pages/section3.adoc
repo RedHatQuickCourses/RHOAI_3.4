@@ -1,0 +1,23 @@
+= MLflow Integration (General Availability) and Prompt Management (Technology Preview)
+
+*What is it?*
+
+*MLflow Integration* is a first-class component of RHOAI that provides centralized Machine Learning (ML) lifecycle management. It acts as a unified mechanism to track experiments, parameters, metrics, and artifacts across various RHOAI tools.
+
+*Prompt Management* is a feature that allows you to save system instructions that produce effective results in the playground as named prompts for reuse across sessions, stored in the MLflow prompt registry.
+
+*Why does it matter?*
+
+Data scientists and ML engineers using disparate components—such as *AI Pipelines, Notebooks, Workbenches, KubeRay, custom components, Ray, and the Training SDK*—require a single source of truth for experiment tracking.
+- *Centralized Lifecycle Management*: Embedding MLflow directly within the user's primary OpenShift AI workspace reduces context switching and improves user experience.
+- *Experiment Traceability*: Allows users to track and compare parameters and metrics to make informed decisions about model performance.
+- *Instruction Standardization*: Prompt Management allows team members to standardize on instructions that work well for specific use cases, tracking refinements through automatic versioning so you can return to earlier versions if needed.
+
+*How to use it?*
+
+- *View Experiments and Runs:* Access the MLflow dashboard directly within OpenShift AI to monitor all ongoing and past AI experiments.
+- *Compare MLflow Runs:* Use the comparison feature in the dashboard to evaluate different runs side-by-side and determine which parameters yielded the best model performance.
+- *Save a Prompt:* From the *Gen AI studio Playground*, click the *Prompt tab* in the chatbot settings panel. Write your system instructions, click *Save*, and enter a name.
+- *Reuse Prompts:* Manage saved prompts via the *Prompts page* under Gen AI studio. To load a prompt, click *Load Prompt* in the playground settings, filter by name, select a version, and click *Load in Playground*.
+
+

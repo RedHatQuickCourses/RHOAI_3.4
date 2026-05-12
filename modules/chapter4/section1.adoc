@@ -1,0 +1,13 @@
+= Unified Observability (General Availability)
+
+== What is it?
+
+A single source of truth for AI metrics across llm-d, MaaS, and hardware, deployed via a unified Prometheus instance.
+
+== Why does it matter?
+
+It provides Persona-Driven Dashboards. Admins see GPU/CPU utilization and queue status, while Data Scientists see Time To First Token (TTFT) and token throughput.
+
+== How to use it?
+
+Zero-configuration metrics are collected by default via the Cluster Observability Operator (COO). View them via native Perses dashboards or export them to external tools.

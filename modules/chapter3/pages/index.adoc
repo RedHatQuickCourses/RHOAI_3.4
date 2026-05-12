@@ -1,7 +1,15 @@
-= Chapter 3
+= The Agentic Era (AgentOps)
 
-In this section, we cover... FIXME
+== Agent Core and AgentOps (Bring Your Own Agent) (Developer Preview)
 
+*What is it?*
 
-- Add or remove section entries in the `antora.yaml` file as needed.
-- Ensure you create or delete the corresponding directory for the chapter accordingly.
+A framework-agnostic operationalization layer that manages the deployment, discovery, and lifecycle of AI agents (e.g., LangChain, CrewAI).
+
+*Why does it matter?*
+
+It bridges the "Governance Gap." It provides Cryptographic Agent Identity using SPIFFE/SPIRE certificates, meaning agents use short-lived tokens. It also provides Deep Execution Tracing to log every LLM call and tool execution.
+
+*How to use it?*
+
+Deploy agents in kernel-isolated sandboxes. Use the AgentCard system to register and discover approved agentic workflows.

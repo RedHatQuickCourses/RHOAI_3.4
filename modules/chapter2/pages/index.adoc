@@ -1,7 +1,24 @@
-= Chapter 2
+= Data-Centric AI & Evaluation
 
-In this section, we cover... FIXME
+== Core Evaluation Stack Control Plane - Eval Hub (Technology Preview)
+
+*What is it?*
+
+Eval Hub is an evaluation orchestration service that acts as the centralized control plane for testing AI systems. It consists of the *EvalHub Server* (handling REST API requests and job orchestration), an *SDK/CLI* for developers, and *Providers* (adapter container images that translate requests into specific framework commands, such as *lm_evaluation_harness* or *garak*). It enables parallel execution of benchmarks across namespaces and tenants.
+
+*Why does it matter?*
+
+Moving from experimentation to production requires objective evidence of readiness. Eval Hub matters because it:
+
+- *Orchestrates at Scale*: Each evaluation runs as an isolated Kubernetes Job, allowing you to run massive benchmarks without blocking other workflows.
+- *Enforces Standards*: It supports *Collections*—grouped benchmarks with specific *Pass criteria and thresholds*—ensuring consistency across different model versions.
+- *Governs Resources*: Through *Kueue integration (Developer Preview)*, evaluation jobs participate in the cluster's quota management and fair-sharing policies, preventing "evaluation spikes" from starving production workloads.
+- *Maintains Multi-tenancy*: Uses the *X-Tenant* header to scope jobs and results to specific namespaces, ensuring data isolation.
+
+*How to use it?*
+
+- Setup: Deploy Eval Hub through the *TrustyAI Operator*. Register a namespace as a tenant by adding the *evalhub.trustyai.opendatahub.io/tenant=* label.
+- *Execution*: Submit evaluation jobs via the REST API, Python SDK (*pip install eval-hub-sdk*), or CLI (*evalhub eval run*). You can point to model endpoints, select built-in benchmarks like *mmlu*, or use custom data from *S3*.
+- *Tracking*: Configure *MLflow experiment tracking* to automatically log metrics. Results can also be exported to an *OCI registry* for long-term traceability and auditing.
 
 
-- Add or remove section entries in the `antora.yaml` file as needed.
-- Ensure you create or delete the corresponding directory for the chapter accordingly.

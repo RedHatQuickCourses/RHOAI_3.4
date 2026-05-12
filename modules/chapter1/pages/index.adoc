@@ -1,7 +1,24 @@
-= Chapter 1
+= High-Performance Inference
 
-In this section, we cover... FIXME
+== Model-as-a-Service (MaaS) Integration (General Availability)
+
+*What is it?*
+
+MaaS is a subscription-based governance platform and AI gateway that acts as a centralized policy enforcement layer between users and model serving infrastructure. In OpenShift AI 3.4, the platform has transitioned to a subscription-based model for access control (replacing the previous tier-based model), allowing models to be delivered as shared resources via managed API endpoints without modifying underlying components.
+
+*Why does it matter?*
+
+As AI adoption scales across an enterprise, managing resource consumption and user access becomes complex. MaaS addresses these challenges through:
+
+- *Subscription-based access control*: Granting specific groups access to models with configurable token limits and priority levels for users with multiple subscriptions.
+- *External models (Technology Preview)*: The ability to route inference requests to external providers such as AWS Bedrock, Azure OpenAI, or Google Vertex AI through the unified MaaS gateway.
+- *External OIDC authentication (Technology Preview)*: Integration with identity providers like Azure AD, Okta, or Keycloak to enable enterprise access without requiring local OpenShift accounts.
+- *Self-service API key management*: Improving developer agility by allowing users to create, list, and revoke their own API keys (permanent or with custom expiration).
+
+*How to use it?*
+
+- *Administrators*: Deploy MaaS via the RHOAI Operator and configure subscriptions using custom resources. Use the MaaS observability dashboard (TP) to monitor token consumption, track rate limit violations, and export usage data in CSV format for showback reporting.
+
+- *Users/Developers*: Access the self-service interface to generate API keys and make standard OpenAI-compatible API calls to models served via llm-d or vLLM (TP) runtimes.
 
 
-- Add or remove section entries in the `antora.yaml` file as needed.
-- Ensure you create or delete the corresponding directory for the chapter accordingly.
