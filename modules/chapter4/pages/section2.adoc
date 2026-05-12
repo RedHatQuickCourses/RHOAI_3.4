@@ -1,0 +1,19 @@
+= Centralized metrics and observability (Technology Preview)
+
+== What is it?
+
+A single source of truth for AI metrics across llm-d, MaaS, and hardware, deployed via a unified Prometheus instance.
+
+== Why does it matter?
+
+Cluster administrators can monitor hardware utilization and MaaS metrics [TP] from a single console.
+
+It also adds the ability to see an agent's step-by-step execution traces, reasoning chains, tool calls, and LLM interactions directly in the console [DP].
+
+The platform retains the flexibility to route these metrics to existing third-party observability sinks.
+
+== How to use it?
+
+Zero-configuration metrics are collected by default via the Cluster Observability Operator (COO).
+
+View them via native Perses dashboards or export them to external tools.

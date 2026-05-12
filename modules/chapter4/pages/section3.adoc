@@ -1,0 +1,22 @@
+= Al Safety with NeMo Guardrails (General Availability)
+
+== What is it?
+
+*Al Safety with NeMo Guardrails* is a comprehensive safety portfolio integrated with the *TrustyAI Operator*.
+It acts as a proactive safety layer between the application code and the LLM, enabling the detection, testing, and mitigation of risks—such as bias, hallucinations, and adversarial attacks—before and during production.
+
+== Why does it matter?
+
+While traditional LLM evaluation focuses on static output quality, NeMo Guardrails provides Programmable Safety Flows. It matters because it offers:
+
+- *Real-time Inline Filtering*: Actively blocks toxic, biased, or off-topic content at the inference layer.
+- *Content Safeguarding*: Detects and masks *Personally Identifiable Information (PII)* and filters profane language to maintain brand reputation.
+- *Operational Flexibility*: Unlike standard fixed guardrails, it uses *Colang* for programmable flows and allows for *Custom Python Actions* (using the @action decorator) to execute complex logic within the server pod.
+- *Prompt Injection Mitigation*: Identifies and blocks malicious adversarial inputs specifically designed to bypass standard model  controls.
+
+== How to use it?
+
+- *Infrastructure Setup*: Create a *ServiceAccount*, *RoleBinding*, and *Secret* (containing an API token) in your namespace to authenticate model access.
+- *Configuration*: Define a *ConfigMap* containing your model details (config.yaml), safety flows (rails.co), and any custom Python detectors (actions.py).
+- *Deployment*: Create and deploy the *NemoGuardrails* Custom Resource (CR), which creates the service account, deployment, and route.
+- *Validation*: Test safety parameters within the *GenAI Studio Playground* iteratively. In production, send requests to the *Guardrails Gateway* via the OpenAI-compatible /v1/chat/completions endpoint.

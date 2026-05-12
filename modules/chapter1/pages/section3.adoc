@@ -1,19 +1,22 @@
-= Speculative Decoding (General Availability)
+= Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)
 
-*What is it?*
+== What is it?
 
-Speculative decoding is an optimization technique that improves inference performance using the *Speculators* library (Technology Preview). It utilizes the *Eagle 3* algorithm, which pairs a small, single-layer *draft model* with a full-sized *verifier model* (the LLM being served). The draft model auto-regressively predicts several tokens, and the verifier model processes these tokens in parallel in a single forward pass.
+The Workload Variant Autoscaler (WVA) is a Kubernetes controller that provides intelligent, inference-aware automatic scaling for llm-d model deployments. Unlike traditional autoscalers that rely on generic CPU or memory metrics, the WVA derives scaling decisions from inference-specific signals—specifically KV cache utilization and request queue length—to accurately reflect the GPU-bound state of the model server.
 
-*Why does it matter?*
+== Why does it matter?
 
-It provides high-speed inference without compromising the integrity of the results. Key advantages include:
+Traditional metrics (CPU/RAM) do not represent the true load of LLM inference, leading to over-provisioning or performance degradation. The WVA addresses this through:
 
-- *Throughput & Latency*: Effective throughput increases and latency decreases (often 2 to 3 times faster) because the verifier processes multiple tokens simultaneously.
-- *Output Quality*: If the verifier rejects a predicted token, it samples a corrected one from its own distribution, ensuring the final output matches exactly what the verifier model would produce alone.
-- *Resource Efficiency*: Eagle 3 draft models require minimal processing overhead due to their small size.
+- *Token-Level Demand Estimation*: It computes demand based on tokens actively being processed (KV cache) and those waiting in the queue.
+- *Saturation-Based Spare Capacity Model*: It evaluates whether the current replica set has sufficient "spare capacity" to absorb traffic increases rather than waiting for full saturation.
+- *Hardware-Aware Optimization*: It coordinates scaling across variants sharing a model identifier, scaling up the "cheapest" variant (e.g., A100 vs H100) first to optimize infrastructure costs.
 
-*How to use it?*
+== How to use it?
 
-- Deployment: Use *podman* to run the AI Inference Server image *(vllm-cuda-rhel9)* and specify a trained Eagle 3 model using the *--model* flag (e.g., *RedHatAl/Qwen3-8B-speculator.eagle3*).
-- Conversion: Use the Red Hat AI Model Optimization Toolkit to convert existing externally-trained Eagle 3 checkpoints into the Speculators format. This is done by cloning the *speculators* repository and running the *apply_eagle3_eagle.sh* script within the toolkit container.
+- *Enable the Controller*: You must first enable the WVA in the *DataScienceCluster custom resource*.
+- *Define Performance Triggers*: Configure *kvCacheThreshold* and *queueLengthThreshold* within your *LLMInferenceService* configuration.
+- *Actuation*: The WVA writes the *wva_desired_replicas* metric to Prometheus, which KEDA then reads to actuate the Horizontal Pod Autoscaler (HPA).
+- *Safety Features*: The system includes a scale-down safety check that simulates load redistribution to prevent premature down-scaling, and skips variants with "pending" replicas to prevent over-provisioning during model loading.
+
 

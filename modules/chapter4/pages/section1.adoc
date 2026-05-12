@@ -1,0 +1,20 @@
+= Al Hub - MCP Catalog (Developer Preview)
+
+== What is it?
+
+The *MCP Catalog* is a feature within the *AI Hub* that provides a unified interface for AI Engineers and Data Scientists to discover and browse Model Context Protocol (MCP) servers. These servers enable AI agents to interact with external tools and data sources. The catalog aggregates servers from multiple sources—including organization-curated, community, and verified providers—and includes advanced filtering, search, and security indicators.
+
+== Why does it matter?
+
+As MCP becomes the standard for enabling AI agent interactions, organizations need a centralized and governed method to manage these connections. The MCP Catalog addresses critical gaps by providing:
+
+- *Centralized Discovery*: Eliminates the need for users to manually find and evaluate MCP servers.
+- *Security and Compliance*: Provides rich metadata, including security indicators, tool access types, and license compliance, giving visibility into the security posture and approval status of external tools.
+- *Integration with MCP Gateway*: Positions RHOAI as a comprehensive platform for enterprise agent development by integrating directly with the MCP Gateway for centralized tool management.
+- *Rapid Tool Access*: Deployed servers are exposed through AI Available Assets in the genAI Studio, making external tools immediately accessible to AI agents.
+
+== How to use it?
+
+- *Discover*: AI Engineers and Data Scientists browse the AI Hub to find required tools from curated or community sources.
+- *Deploy*: Platform Engineers deploy OCI-based MCP servers directly to Kubernetes via the MCP Deployment Operator.
+- *Execute*: Once deployed, tools are automatically listed as assets in the genAI Studio for use in agentic workflows.

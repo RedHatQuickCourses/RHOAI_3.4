@@ -1,22 +1,22 @@
-= Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)
+= Distributed Inference with llm-d on xKS (Technology Preview)
 
-*What is it?*
+== What is it?
 
-The Workload Variant Autoscaler (WVA) is a Kubernetes controller that provides intelligent, inference-aware automatic scaling for llm-d model deployments. Unlike traditional autoscalers that rely on generic CPU or memory metrics, the WVA derives scaling decisions from inference-specific signals—specifically KV cache utilization and request queue length—to accurately reflect the GPU-bound state of the model server.
+This feature extends enterprise-grade LLM inference serving beyond OpenShift to managed Kubernetes clusters on public clouds, specifically Azure Kubernetes Service (AKS) and CoreWeave Kubernetes Service (CKS). It allows for production-scale generative AI inference on any CNCF-certified cluster using standard Kubernetes tools like Helm charts and kubectl, rather than relying on the OpenShift Operator Lifecycle Manager (OLM).
 
-*Why does it matter?*
+== Why does it matter?
 
-Traditional metrics (CPU/RAM) do not represent the true load of LLM inference, leading to over-provisioning or performance degradation. The WVA addresses this through:
+It provides "Architecture Freedom," enabling teams to serve massive foundation models without vendor lock-in to OpenShift-only deployment methods. Technical pillars include:
 
-- Token-Level Demand Estimation: It computes demand based on tokens actively being processed (KV cache) and those waiting in the queue.
-- Saturation-Based Spare Capacity Model: It evaluates whether the current replica set has sufficient "spare capacity" to absorb traffic increases rather than waiting for full saturation.
-- Hardware-Aware Optimization: It coordinates scaling across variants sharing a model identifier, scaling up the "cheapest" variant (e.g., A100 vs H100) first to optimize infrastructure costs.
+- Prefill-decode Disaggregation: Separates prompt processing from token generation, allowing each phase to scale independently for optimal performance.
+- Intelligent Scheduling & KV Cache Management: Optimizes resource usage and reduces memory requirements, enabling much longer context windows.
+- Wide Expert Parallelism: Efficiently handles Mixture of Experts (MoE) models across many GPU nodes.
+- Secure by Design: Inter-component communication is secured using mTLS with certificate rotation, with all components running under minimal required permissions.
 
-*How to use it?*
+== How to use it?
 
-- Enable the Controller: You must first enable the WVA in the *DataScienceCluster custom resource*.
-- Define Performance Triggers: Configure *kvCacheThreshold* and *queueLengthThreshold* within your *LLMInferenceService* configuration.
-- Actuation: The WVA writes the *wva_desired_replicas* metric to Prometheus, which KEDA then reads to actuate the Horizontal Pod Autoscaler (HPA).
-- Safety Features: The system includes a scale-down safety check that simulates load redistribution to prevent premature down-scaling, and skips variants with "pending" replicas to prevent over-provisioning during model loading.
+Deploy the inference stack using Helm charts distributed as OCI container images from Deploy the inference stack using Helm charts distributed as OCI container images from *quay.io/opendatahub/rhaii-helm-chart*.
+
+The solution utilizes a modern stack including KServe for lifecycle management, Istio for service mesh security, LeaderWorkerSet for pod topology coordination, and the Gateway API for intelligent request routing.
 
 

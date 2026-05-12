@@ -1,0 +1,18 @@
+= Adversarial Vulnerability Scanning with Garak Red Teaming (Technology Preview)
+
+== What is it?
+
+Red Hat AI 3.4 integrates automated adversarial scanning directly into the development lifecycle.
+A tool for proactive adversarial vulnerability scanning included within the Llama Stack (LLS) distribution.
+
+== Why does it matter?
+
+Leveraging technology from the *Chatterbox Labs* acquisition, the platform utilizes *Garak* to screen models and agentic systems for risks like *jailbreaks*, *prompt injections*, and *bias*.
+
+This capability provides advanced risk analysis to catch security flaws in model logic during the development phase rather than at runtime.
+
+By identifying and mitigating vulnerabilities early, teams can evaluate the integrity of their AI applications to enable a safer transition to production deployment.
+
+== How to use it?
+
+Utilize the Garak evaluation provider to generate security report artifacts and validate safety using Synthetic Data Generation (SDG).

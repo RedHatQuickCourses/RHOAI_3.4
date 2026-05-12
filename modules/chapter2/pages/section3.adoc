@@ -1,23 +1,24 @@
-= MLflow Integration (General Availability) and Prompt Management (Technology Preview)
+= Automate Machine Learning Model Training with AutoML (Technology Preview)
 
-*What is it?*
+== What is it?
 
-*MLflow Integration* is a first-class component of RHOAI that provides centralized Machine Learning (ML) lifecycle management. It acts as a unified mechanism to track experiments, parameters, metrics, and artifacts across various RHOAI tools.
+AutoML is an automated feature designed to streamline the end-to-end development of machine learning workflows for *Tabular* (classification and regression) and *Time Series* task types. It automatically handles feature engineering, hyperparameter optimization, and model selection by training several models and ranking them in a leaderboard.
 
-*Prompt Management* is a feature that allows you to save system instructions that produce effective results in the playground as named prompts for reuse across sessions, stored in the MLflow prompt registry.
+== Why does it matter?
 
-*Why does it matter?*
+Building scalable predictive intelligence is highly complex and typically requires specialized skills. AutoML matters because it:
 
-Data scientists and ML engineers using disparate components—such as *AI Pipelines, Notebooks, Workbenches, KubeRay, custom components, Ray, and the Training SDK*—require a single source of truth for experiment tracking.
-- *Centralized Lifecycle Management*: Embedding MLflow directly within the user's primary OpenShift AI workspace reduces context switching and improves user experience.
-- *Experiment Traceability*: Allows users to track and compare parameters and metrics to make informed decisions about model performance.
-- *Instruction Standardization*: Prompt Management allows team members to standardize on instructions that work well for specific use cases, tracking refinements through automatic versioning so you can return to earlier versions if needed.
+- *Eliminates Manual Repetition*: It handles the intricate steps of building a production-grade ML pipeline in one unified step.
+- *Drives Precision*: It evaluated models using advanced metrics such as *confusion matrix, ROC curve, and F1 score* to select the best possible solution for your use case.
+- *Provides Deep Insight*: *Model Detail Views* allow you to inspect optimized metrics specific to your task type, ensuring transparency in model selection.
+- *Accelerates Productization*: Reduces the time-to-market for predictive AI models by automating the transition from raw tabular data to trained artifacts.
 
-*How to use it?*
+== How to use it?
 
-- *View Experiments and Runs:* Access the MLflow dashboard directly within OpenShift AI to monitor all ongoing and past AI experiments.
-- *Compare MLflow Runs:* Use the comparison feature in the dashboard to evaluate different runs side-by-side and determine which parameters yielded the best model performance.
-- *Save a Prompt:* From the *Gen AI studio Playground*, click the *Prompt tab* in the chatbot settings panel. Write your system instructions, click *Save*, and enter a name.
-- *Reuse Prompts:* Manage saved prompts via the *Prompts page* under Gen AI studio. To load a prompt, click *Load Prompt* in the playground settings, filter by name, select a version, and click *Load in Playground*.
+- *Create Optimization Run*: Upload your tabular or time-series data and configure your common and task-specific parameters.
+- *Evaluate Results*: Inspect the *AutoML Evaluation Metrics* and leaderboard to determine the best performing model.
+- *Operationalize*: Use the generated model artifacts and deployment notebook to *run predictions* or *deploy the AutoML model for inference*.
+
+
 
 

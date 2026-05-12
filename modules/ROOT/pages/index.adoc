@@ -2,7 +2,6 @@
 
 Welcome to the RHOAI 3.4 Feature Training. This course is designed to move beyond a simple "reading of the features." For each new capability, we will explore what it is, why it is a critical addition to your AI toolkit, and how you can begin using it today.
 
-
 == Technology Preview Features
 
 Technology Preview features are not supported with Red Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process. For more information about the support scope of Red Hat Technology Preview features, see https://access.redhat.com/support/offerings/techpreview/[Technology Preview Features Support Scope].

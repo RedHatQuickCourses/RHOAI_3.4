@@ -1,0 +1,19 @@
+= Speculative Decoding (General Availability)
+
+== What is it?
+
+Speculative decoding is an optimization technique that improves inference performance using the *Speculators* library (Technology Preview). It utilizes the *Eagle 3* algorithm, which pairs a small, single-layer *draft model* with a full-sized *verifier model* (the LLM being served). The draft model auto-regressively predicts several tokens, and the verifier model processes these tokens in parallel in a single forward pass.
+
+== Why does it matter?
+
+It provides high-speed inference without compromising the integrity of the results. Key advantages include:
+
+- *Throughput & Latency*: Effective throughput increases and latency decreases (often 2 to 3 times faster) because the verifier processes multiple tokens simultaneously.
+- *Output Quality*: If the verifier rejects a predicted token, it samples a corrected one from its own distribution, ensuring the final output matches exactly what the verifier model would produce alone.
+- *Resource Efficiency*: Eagle 3 draft models require minimal processing overhead due to their small size.
+
+== How to use it?
+
+- *Deployment*: Use *podman* to run the AI Inference Server image *(vllm-cuda-rhel9)* and specify a trained Eagle 3 model using the *--model* flag (e.g., *RedHatAl/Qwen3-8B-speculator.eagle3*).
+- *Conversion*: Use the Red Hat AI Model Optimization Toolkit to convert existing externally-trained Eagle 3 checkpoints into the Speculators format. This is done by cloning the *speculators* repository and running the *apply_eagle3_eagle.sh* script within the toolkit container.
+

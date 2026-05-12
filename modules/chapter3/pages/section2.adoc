@@ -1,6 +1,23 @@
-= Section 2
+= GenAI Studio (Technology Preview) and Prompt Lab (General Availability)
 
-* Create multiple copies of this section as needed.
-* Remove any unnecessary sections or chapter pages.
-* Customize the section as appropriate.
-* Ensure that each page contains a manageable amount of content.
+== What is it?
+
+*GenAI Studio* is an interactive environment (Playground) within the Red Hat OpenShift AI dashboard for prototyping and evaluating foundation models, custom models, and MCP servers.
+
+*Prompt Lab* provides General Availability (GA) capabilities for prompt engineering and versioned management, preventing prompts from being lost in notebooks.
+
+== Why does it matter?
+
+It accelerates the model selection process by allowing users to validate behavior before application integration. Key features include:
+
+- *Custom Endpoints:* Users can access models deployed in other namespaces or external providers (AWS, OpenAI, etc.).
+- *Side-by-Side Comparison:* Compare response quality, tone, and latency across two models simultaneously.
+- *Stateless Prototyping:* A rapid environment to test prompt engineering and tool calling without initial application code overhead.
+- *Tool Calling Validation:* Essential for verifying that model runtime arguments (like *--enable-auto-tool-choice*) are correctly configured to search documents or execute external tools.
+
+== How to use it?
+
+- *Configuration:* Select your project and model deployment. designate models as available assets by selecting *Add as AI asset endpoint.*
+- *RAG Testing:* Enable the RAG section, upload documents (PDF, DOC, CSV), and optimize text processing via *Maximum chunk length, Chunk overlap,* and *Delimiters.*
+- *MCP Interaction:* Select authorized MCP servers, click the Auth icon to provide session-based tokens, and use the *View tools* (wrench) icon to copy tool names for use in chat.
+*Export:* Click *View code* to generate a *Python code template* that captures your model parameters, RAG files, and MCP configurations for use in a local IDE.

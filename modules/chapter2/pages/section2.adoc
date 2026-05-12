@@ -1,23 +1,21 @@
-= Automate Machine Learning Model Training with AutoML (Technology Preview)
+= Automate RAG Optimization with AutoRAG (Technology Preview)
 
-*What is it?*
+== What is it?
 
-AutoML is an automated feature designed to streamline the end-to-end development of machine learning workflows for *Tabular* (classification and regression) and *Time Series* task types. It automatically handles feature engineering, hyperparameter optimization, and model selection by training several models and ranking them in a leaderboard.
+AutoRAG is an automated workflow that identifies the optimal Retrieval-Augmented Generation (RAG) configuration for your specific data. It automates the process of testing variations in the *Search Space*—including chunk size, embedding models, vector stores, and top-K retrieval settings—using an automated optimization pipeline.
 
-*Why does it matter?*
+== Why does it matter?
 
-Building scalable predictive intelligence is highly complex and typically requires specialized skills. AutoML matters because it:
-- *Eliminates Manual Repetition*: It handles the intricate steps of building a production-grade ML pipeline in one unified step.
-- *Drives Precision*: It evaluated models using advanced metrics such as *confusion matrix, ROC curve, and F1 score* to select the best possible solution for your use case.
-- *Provides Deep Insight*: *Model Detail Views* allow you to inspect optimized metrics specific to your task type, ensuring transparency in model selection.
-- *Accelerates Productization*: Reduces the time-to-market for predictive AI models by automating the transition from raw tabular data to trained artifacts.
+Building a high-quality RAG system manually is a slow, iterative process involving expert-level guesswork. AutoRAG shifts this burden from data scientists to automated pipelines, providing:
 
-*How to use it?*
+- *Hyper-parameter Optimization*: Systematically tests multiple RAG algorithms and techniques against your specific use case.
+- *Metric-Driven Selection*: Evaluates each configuration using advanced metrics such as Answer Correctness and Faithfulness to ensure generated responses are grounded and accurate.
+- *Accelerated Time-to-Market*: Moves from raw documents to a validated, high-performing RAG configuration in minutes instead of days.
 
-1. *Create Optimization Run*: Upload your tabular or time-series data and configure your common and task-specific parameters.
-2. *Evaluate Results*: Inspect the *AutoML Evaluation Metrics* and leaderboard to determine the best performing model.
-- *Operationalize*: Use the generated model artifacts and deployment notebook to *run predictions* or *deploy the AutoML model for inference*.
+== How to use it?
 
-
-
+- *Prepare Test Data*: Gather your source documents and a set of test Question-Answer (QA) pairs.
+- *Create Optimization Run*: Use the RHOAI dashboard or Jupyter Notebooks to define your search space and trigger the optimization run.
+- *Evaluate Results*: Review the Leaderboard to compare performance across different configurations.
+- *Deploy*: For top-performing configurations, AutoRAG generates a Jupyter Notebook that you can use to immediately deploy and run the optimized RAG pattern.
 
