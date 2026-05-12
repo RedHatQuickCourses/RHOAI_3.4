@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>MLflow Integration (General Availability) and Prompt Management (Technology Preview) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <title>Automate Machine Learning Model Training with AutoML (Technology Preview) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
     <link rel="prev" href="section2.html">
-    <link rel="next" href="../chapter3/index.html">
+    <link rel="next" href="section4.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
@@ -54,13 +54,16 @@
     <a class="nav-link" href="../chapter1/index.html">High-Performance Inference</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section1.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
+    <a class="nav-link" href="../chapter1/section1.html">Model-as-a-Service (MaaS) Integration (General Availability)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section2.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+    <a class="nav-link" href="../chapter1/section2.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section3.html">Speculative Decoding (General Availability)</a>
+    <a class="nav-link" href="../chapter1/section3.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter1/section4.html">Speculative Decoding (General Availability)</a>
   </li>
 </ul>
   </li>
@@ -73,13 +76,16 @@
     <a class="nav-link" href="index.html">Data-Centric AI &amp; Evaluation</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section1.html">Section 1</a>
+    <a class="nav-link" href="section1.html">Core Evaluation Stack Control Plane - Eval Hub (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section2.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+    <a class="nav-link" href="section2.html">Automate RAG Optimization with AutoRAG (Technology Preview)</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="section3.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
+    <a class="nav-link" href="section3.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section4.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -92,7 +98,10 @@
     <a class="nav-link" href="../chapter3/index.html">The Agentic Era (AgentOps)</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter3/section1.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
+    <a class="nav-link" href="../chapter3/section1.html">Agent Core and AgentOps (Bring Your Own Agent) (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section2.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
   </li>
 </ul>
   </li>
@@ -102,16 +111,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="#index.adoc">index.adoc</a>
+    <a class="nav-link" href="../chapter4/index.html">AI Platform and Safety</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section1.adoc">section1.adoc</a>
+    <a class="nav-link" href="../chapter4/section1.html">Al Hub - MCP Catalog (Developer Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section2.adoc">section2.adoc</a>
+    <a class="nav-link" href="../chapter4/section2.html">Centralized metrics and observability (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section3.adoc">section3.adoc</a>
+    <a class="nav-link" href="../chapter4/section3.html">Al Safety with NeMo Guardrails (General Availability)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter4/section4.html">Adversarial Vulnerability Scanning with Garak Red Teaming (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -147,7 +159,7 @@
   <ul>
     <li><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></li>
     <li><a href="index.html">Data-Centric AI &amp; Evaluation</a></li>
-    <li><a href="section3.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a></li>
+    <li><a href="section3.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a></li>
   </ul>
 </nav>
 </div>
@@ -156,47 +168,60 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</h1>
+<h1 class="page">Automate Machine Learning Model Training with AutoML (Technology Preview)</h1>
+<div class="sect1">
+<h2 id="_what_is_it"><a class="anchor" href="#_what_is_it"></a>What is it?</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><strong>What is it?</strong></p>
+<p>AutoML is an automated feature designed to streamline the end-to-end development of machine learning workflows for <strong>Tabular</strong> (classification and regression) and <strong>Time Series</strong> task types. It automatically handles feature engineering, hyperparameter optimization, and model selection by training several models and ranking them in a leaderboard.</p>
 </div>
-<div class="paragraph">
-<p><strong>MLflow Integration</strong> is a first-class component of RHOAI that provides centralized Machine Learning (ML) lifecycle management. It acts as a unified mechanism to track experiments, parameters, metrics, and artifacts across various RHOAI tools.</p>
 </div>
-<div class="paragraph">
-<p><strong>Prompt Management</strong> is a feature that allows you to save system instructions that produce effective results in the playground as named prompts for reuse across sessions, stored in the MLflow prompt registry.</p>
 </div>
+<div class="sect1">
+<h2 id="_why_does_it_matter"><a class="anchor" href="#_why_does_it_matter"></a>Why does it matter?</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><strong>Why does it matter?</strong></p>
-</div>
-<div class="paragraph">
-<p>Data scientists and ML engineers using disparate components—such as <strong>AI Pipelines, Notebooks, Workbenches, KubeRay, custom components, Ray, and the Training SDK</strong>—require a single source of truth for experiment tracking.
-- <strong>Centralized Lifecycle Management</strong>: Embedding MLflow directly within the user&#8217;s primary OpenShift AI workspace reduces context switching and improves user experience.
-- <strong>Experiment Traceability</strong>: Allows users to track and compare parameters and metrics to make informed decisions about model performance.
-- <strong>Instruction Standardization</strong>: Prompt Management allows team members to standardize on instructions that work well for specific use cases, tracking refinements through automatic versioning so you can return to earlier versions if needed.</p>
-</div>
-<div class="paragraph">
-<p><strong>How to use it?</strong></p>
+<p>Building scalable predictive intelligence is highly complex and typically requires specialized skills. AutoML matters because it:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>View Experiments and Runs:</strong> Access the MLflow dashboard directly within OpenShift AI to monitor all ongoing and past AI experiments.</p>
+<p><strong>Eliminates Manual Repetition</strong>: It handles the intricate steps of building a production-grade ML pipeline in one unified step.</p>
 </li>
 <li>
-<p><strong>Compare MLflow Runs:</strong> Use the comparison feature in the dashboard to evaluate different runs side-by-side and determine which parameters yielded the best model performance.</p>
+<p><strong>Drives Precision</strong>: It evaluated models using advanced metrics such as <strong>confusion matrix, ROC curve, and F1 score</strong> to select the best possible solution for your use case.</p>
 </li>
 <li>
-<p><strong>Save a Prompt:</strong> From the <strong>Gen AI studio Playground</strong>, click the <strong>Prompt tab</strong> in the chatbot settings panel. Write your system instructions, click <strong>Save</strong>, and enter a name.</p>
+<p><strong>Provides Deep Insight</strong>: <strong>Model Detail Views</strong> allow you to inspect optimized metrics specific to your task type, ensuring transparency in model selection.</p>
 </li>
 <li>
-<p><strong>Reuse Prompts:</strong> Manage saved prompts via the <strong>Prompts page</strong> under Gen AI studio. To load a prompt, click <strong>Load Prompt</strong> in the playground settings, filter by name, select a version, and click <strong>Load in Playground</strong>.</p>
+<p><strong>Accelerates Productization</strong>: Reduces the time-to-market for predictive AI models by automating the transition from raw tabular data to trained artifacts.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_use_it"><a class="anchor" href="#_how_to_use_it"></a>How to use it?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Create Optimization Run</strong>: Upload your tabular or time-series data and configure your common and task-specific parameters.</p>
+</li>
+<li>
+<p><strong>Evaluate Results</strong>: Inspect the <strong>AutoML Evaluation Metrics</strong> and leaderboard to determine the best performing model.</p>
+</li>
+<li>
+<p><strong>Operationalize</strong>: Use the generated model artifacts and deployment notebook to <strong>run predictions</strong> or <strong>deploy the AutoML model for inference</strong>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="section2.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a></span>
-  <span class="next"><a href="../chapter3/index.html">The Agentic Era (AgentOps)</a></span>
+  <span class="prev"><a href="section2.html">Automate RAG Optimization with AutoRAG (Technology Preview)</a></span>
+  <span class="next"><a href="section4.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a></span>
 </nav>
 </article>
   </div>

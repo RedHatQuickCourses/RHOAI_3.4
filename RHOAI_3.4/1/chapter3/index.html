@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>The Agentic Era (AgentOps) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
-    <link rel="prev" href="../chapter2/section3.html">
+    <link rel="prev" href="../chapter2/section4.html">
     <link rel="next" href="section1.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -54,13 +54,16 @@
     <a class="nav-link" href="../chapter1/index.html">High-Performance Inference</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section1.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
+    <a class="nav-link" href="../chapter1/section1.html">Model-as-a-Service (MaaS) Integration (General Availability)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section2.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+    <a class="nav-link" href="../chapter1/section2.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section3.html">Speculative Decoding (General Availability)</a>
+    <a class="nav-link" href="../chapter1/section3.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter1/section4.html">Speculative Decoding (General Availability)</a>
   </li>
 </ul>
   </li>
@@ -73,13 +76,16 @@
     <a class="nav-link" href="../chapter2/index.html">Data-Centric AI &amp; Evaluation</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter2/section1.html">Core Evaluation Stack Control Plane - Eval Hub (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section2.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+    <a class="nav-link" href="../chapter2/section2.html">Automate RAG Optimization with AutoRAG (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section3.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
+    <a class="nav-link" href="../chapter2/section3.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section4.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -92,7 +98,10 @@
     <a class="nav-link" href="index.html">The Agentic Era (AgentOps)</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section1.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
+    <a class="nav-link" href="section1.html">Agent Core and AgentOps (Bring Your Own Agent) (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section2.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
   </li>
 </ul>
   </li>
@@ -102,16 +111,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="#index.adoc">index.adoc</a>
+    <a class="nav-link" href="../chapter4/index.html">AI Platform and Safety</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section1.adoc">section1.adoc</a>
+    <a class="nav-link" href="../chapter4/section1.html">Al Hub - MCP Catalog (Developer Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section2.adoc">section2.adoc</a>
+    <a class="nav-link" href="../chapter4/section2.html">Centralized metrics and observability (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section3.adoc">section3.adoc</a>
+    <a class="nav-link" href="../chapter4/section3.html">Al Safety with NeMo Guardrails (General Availability)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter4/section4.html">Adversarial Vulnerability Scanning with Garak Red Teaming (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -156,32 +168,10 @@
 </aside>
 <article class="doc">
 <h1 class="page">The Agentic Era (AgentOps)</h1>
-<div class="sect1">
-<h2 id="_agent_core_and_agentops_bring_your_own_agent_developer_preview"><a class="anchor" href="#_agent_core_and_agentops_bring_your_own_agent_developer_preview"></a>Agent Core and AgentOps (Bring Your Own Agent) (Developer Preview)</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>What is it?</strong></p>
-</div>
-<div class="paragraph">
-<p>A framework-agnostic operationalization layer that manages the deployment, discovery, and lifecycle of AI agents (e.g., LangChain, CrewAI).</p>
-</div>
-<div class="paragraph">
-<p><strong>Why does it matter?</strong></p>
-</div>
-<div class="paragraph">
-<p>It bridges the "Governance Gap." It provides Cryptographic Agent Identity using SPIFFE/SPIRE certificates, meaning agents use short-lived tokens. It also provides Deep Execution Tracing to log every LLM call and tool execution.</p>
-</div>
-<div class="paragraph">
-<p><strong>How to use it?</strong></p>
-</div>
-<div class="paragraph">
-<p>Deploy agents in kernel-isolated sandboxes. Use the AgentCard system to register and discover approved agentic workflows.</p>
-</div>
-</div>
-</div>
+
 <nav class="pagination">
-  <span class="prev"><a href="../chapter2/section3.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a></span>
-  <span class="next"><a href="section1.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a></span>
+  <span class="prev"><a href="../chapter2/section4.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a></span>
+  <span class="next"><a href="section1.html">Agent Core and AgentOps (Bring Your Own Agent) (Developer Preview)</a></span>
 </nav>
 </article>
   </div>

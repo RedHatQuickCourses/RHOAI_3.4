@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Distributed Inference with llm-d on xKS (Technology Preview) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <title>Model-as-a-Service (MaaS) Integration (General Availability) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
     <link rel="prev" href="index.html">
     <link rel="next" href="section2.html">
     <meta name="generator" content="Antora 3.1.3">
@@ -54,13 +54,16 @@
     <a class="nav-link" href="index.html">High-Performance Inference</a>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="section1.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
+    <a class="nav-link" href="section1.html">Model-as-a-Service (MaaS) Integration (General Availability)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section2.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+    <a class="nav-link" href="section2.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section3.html">Speculative Decoding (General Availability)</a>
+    <a class="nav-link" href="section3.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section4.html">Speculative Decoding (General Availability)</a>
   </li>
 </ul>
   </li>
@@ -73,13 +76,16 @@
     <a class="nav-link" href="../chapter2/index.html">Data-Centric AI &amp; Evaluation</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter2/section1.html">Core Evaluation Stack Control Plane - Eval Hub (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section2.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+    <a class="nav-link" href="../chapter2/section2.html">Automate RAG Optimization with AutoRAG (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section3.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
+    <a class="nav-link" href="../chapter2/section3.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section4.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -92,7 +98,10 @@
     <a class="nav-link" href="../chapter3/index.html">The Agentic Era (AgentOps)</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter3/section1.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
+    <a class="nav-link" href="../chapter3/section1.html">Agent Core and AgentOps (Bring Your Own Agent) (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section2.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
   </li>
 </ul>
   </li>
@@ -102,16 +111,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="#index.adoc">index.adoc</a>
+    <a class="nav-link" href="../chapter4/index.html">AI Platform and Safety</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section1.adoc">section1.adoc</a>
+    <a class="nav-link" href="../chapter4/section1.html">Al Hub - MCP Catalog (Developer Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section2.adoc">section2.adoc</a>
+    <a class="nav-link" href="../chapter4/section2.html">Centralized metrics and observability (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section3.adoc">section3.adoc</a>
+    <a class="nav-link" href="../chapter4/section3.html">Al Safety with NeMo Guardrails (General Availability)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter4/section4.html">Adversarial Vulnerability Scanning with Garak Red Teaming (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -147,7 +159,7 @@
   <ul>
     <li><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></li>
     <li><a href="index.html">High-Performance Inference</a></li>
-    <li><a href="section1.html">Distributed Inference with llm-d on xKS (Technology Preview)</a></li>
+    <li><a href="section1.html">Model-as-a-Service (MaaS) Integration (General Availability)</a></li>
   </ul>
 </nav>
 </div>
@@ -156,44 +168,57 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Distributed Inference with llm-d on xKS (Technology Preview)</h1>
+<h1 class="page">Model-as-a-Service (MaaS) Integration (General Availability)</h1>
+<div class="sect1">
+<h2 id="_what_is_it"><a class="anchor" href="#_what_is_it"></a>What is it?</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><strong>What is it?</strong></p>
+<p>MaaS is a subscription-based governance platform and AI gateway that acts as a centralized policy enforcement layer between users and model serving infrastructure. In OpenShift AI 3.4, the platform has transitioned to a subscription-based model for access control (replacing the previous tier-based model), allowing models to be delivered as shared resources via managed API endpoints without modifying underlying components.</p>
 </div>
-<div class="paragraph">
-<p>This feature extends enterprise-grade LLM inference serving beyond OpenShift to managed Kubernetes clusters on public clouds, specifically Azure Kubernetes Service (AKS) and CoreWeave Kubernetes Service (CKS). It allows for production-scale generative AI inference on any CNCF-certified cluster using standard Kubernetes tools like Helm charts and kubectl, rather than relying on the OpenShift Operator Lifecycle Manager (OLM).</p>
 </div>
-<div class="paragraph">
-<p><strong>Why does it matter?</strong></p>
 </div>
+<div class="sect1">
+<h2 id="_why_does_it_matter"><a class="anchor" href="#_why_does_it_matter"></a>Why does it matter?</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>It provides "Architecture Freedom," enabling teams to serve massive foundation models without vendor lock-in to OpenShift-only deployment methods. Technical pillars include:</p>
+<p>As AI adoption scales across an enterprise, managing resource consumption and user access becomes complex. MaaS addresses these challenges through:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Prefill-decode Disaggregation: Separates prompt processing from token generation, allowing each phase to scale independently for optimal performance.</p>
+<p><strong>Subscription-based access control</strong>: Granting specific groups access to models with configurable token limits and priority levels for users with multiple subscriptions.</p>
 </li>
 <li>
-<p>Intelligent Scheduling &amp; KV Cache Management: Optimizes resource usage and reduces memory requirements, enabling much longer context windows.</p>
+<p><strong>External models (Technology Preview)</strong>: The ability to route inference requests to external providers such as AWS Bedrock, Azure OpenAI, or Google Vertex AI through the unified MaaS gateway.</p>
 </li>
 <li>
-<p>Wide Expert Parallelism: Efficiently handles Mixture of Experts (MoE) models across many GPU nodes.</p>
+<p><strong>External OIDC authentication (Technology Preview)</strong>: Integration with identity providers like Azure AD, Okta, or Keycloak to enable enterprise access without requiring local OpenShift accounts.</p>
 </li>
 <li>
-<p>Secure by Design: Inter-component communication is secured using mTLS with certificate rotation, with all components running under minimal required permissions.</p>
+<p><strong>Self-service API key management</strong>: Improving developer agility by allowing users to create, list, and revoke their own API keys (permanent or with custom expiration).</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>How to use it?</strong></p>
 </div>
-<div class="paragraph">
-<p>Deploy the inference stack using Helm charts distributed as OCI container images from Deploy the inference stack using Helm charts distributed as OCI container images from <strong>quay.io/opendatahub/rhaii-helm-chart</strong>. The solution utilizes a modern stack including KServe for lifecycle management, Istio for service mesh security, LeaderWorkerSet for pod topology coordination, and the Gateway API for intelligent request routing.</p>
+</div>
+<div class="sect1">
+<h2 id="_how_to_use_it"><a class="anchor" href="#_how_to_use_it"></a>How to use it?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Administrators</strong>: Deploy MaaS via the RHOAI Operator and configure subscriptions using custom resources. Use the MaaS observability dashboard (TP) to monitor token consumption, track rate limit violations, and export usage data in CSV format for showback reporting.</p>
+</li>
+<li>
+<p><strong>Users/Developers</strong>: Access the self-service interface to generate API keys and make standard OpenAI-compatible API calls to models served via llm-d or vLLM (TP) runtimes.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="index.html">High-Performance Inference</a></span>
-  <span class="next"><a href="section2.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a></span>
+  <span class="next"><a href="section2.html">Distributed Inference with llm-d on xKS (Technology Preview)</a></span>
 </nav>
 </article>
   </div>

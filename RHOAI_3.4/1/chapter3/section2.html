@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Section 2 :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <title>GenAI Studio (Technology Preview) and Prompt Lab (General Availability) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <link rel="prev" href="section1.html">
+    <link rel="next" href="../chapter4/index.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
@@ -52,13 +54,16 @@
     <a class="nav-link" href="../chapter1/index.html">High-Performance Inference</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section1.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
+    <a class="nav-link" href="../chapter1/section1.html">Model-as-a-Service (MaaS) Integration (General Availability)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section2.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+    <a class="nav-link" href="../chapter1/section2.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section3.html">Speculative Decoding (General Availability)</a>
+    <a class="nav-link" href="../chapter1/section3.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter1/section4.html">Speculative Decoding (General Availability)</a>
   </li>
 </ul>
   </li>
@@ -71,13 +76,16 @@
     <a class="nav-link" href="../chapter2/index.html">Data-Centric AI &amp; Evaluation</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter2/section1.html">Core Evaluation Stack Control Plane - Eval Hub (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section2.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+    <a class="nav-link" href="../chapter2/section2.html">Automate RAG Optimization with AutoRAG (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section3.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
+    <a class="nav-link" href="../chapter2/section3.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section4.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -90,7 +98,10 @@
     <a class="nav-link" href="index.html">The Agentic Era (AgentOps)</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section1.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
+    <a class="nav-link" href="section1.html">Agent Core and AgentOps (Bring Your Own Agent) (Developer Preview)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="section2.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
   </li>
 </ul>
   </li>
@@ -100,16 +111,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="#index.adoc">index.adoc</a>
+    <a class="nav-link" href="../chapter4/index.html">AI Platform and Safety</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section1.adoc">section1.adoc</a>
+    <a class="nav-link" href="../chapter4/section1.html">Al Hub - MCP Catalog (Developer Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section2.adoc">section2.adoc</a>
+    <a class="nav-link" href="../chapter4/section2.html">Centralized metrics and observability (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section3.adoc">section3.adoc</a>
+    <a class="nav-link" href="../chapter4/section3.html">Al Safety with NeMo Guardrails (General Availability)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter4/section4.html">Adversarial Vulnerability Scanning with Garak Red Teaming (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -144,7 +158,8 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></li>
-    <li><a href="section2.html">Section 2</a></li>
+    <li><a href="index.html">The Agentic Era (AgentOps)</a></li>
+    <li><a href="section2.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a></li>
   </ul>
 </nav>
 </div>
@@ -153,23 +168,65 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Section 2</h1>
+<h1 class="page">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</h1>
+<div class="sect1">
+<h2 id="_what_is_it"><a class="anchor" href="#_what_is_it"></a>What is it?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>GenAI Studio</strong> is an interactive environment (Playground) within the Red Hat OpenShift AI dashboard for prototyping and evaluating foundation models, custom models, and MCP servers.</p>
+</div>
+<div class="paragraph">
+<p><strong>Prompt Lab</strong> provides General Availability (GA) capabilities for prompt engineering and versioned management, preventing prompts from being lost in notebooks.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_does_it_matter"><a class="anchor" href="#_why_does_it_matter"></a>Why does it matter?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It accelerates the model selection process by allowing users to validate behavior before application integration. Key features include:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Create multiple copies of this section as needed.</p>
+<p><strong>Custom Endpoints:</strong> Users can access models deployed in other namespaces or external providers (AWS, OpenAI, etc.).</p>
 </li>
 <li>
-<p>Remove any unnecessary sections or chapter pages.</p>
+<p><strong>Side-by-Side Comparison:</strong> Compare response quality, tone, and latency across two models simultaneously.</p>
 </li>
 <li>
-<p>Customize the section as appropriate.</p>
+<p><strong>Stateless Prototyping:</strong> A rapid environment to test prompt engineering and tool calling without initial application code overhead.</p>
 </li>
 <li>
-<p>Ensure that each page contains a manageable amount of content.</p>
+<p><strong>Tool Calling Validation:</strong> Essential for verifying that model runtime arguments (like <strong>--enable-auto-tool-choice</strong>) are correctly configured to search documents or execute external tools.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_use_it"><a class="anchor" href="#_how_to_use_it"></a>How to use it?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Configuration:</strong> Select your project and model deployment. designate models as available assets by selecting <strong>Add as AI asset endpoint.</strong></p>
+</li>
+<li>
+<p><strong>RAG Testing:</strong> Enable the RAG section, upload documents (PDF, DOC, CSV), and optimize text processing via <strong>Maximum chunk length, Chunk overlap,</strong> and <strong>Delimiters.</strong></p>
+</li>
+<li>
+<p><strong>MCP Interaction:</strong> Select authorized MCP servers, click the Auth icon to provide session-based tokens, and use the <strong>View tools</strong> (wrench) icon to copy tool names for use in chat.
+<strong>Export:</strong> Click <strong>View code</strong> to generate a <strong>Python code template</strong> that captures your model parameters, RAG files, and MCP configurations for use in a local IDE.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="section1.html">Agent Core and AgentOps (Bring Your Own Agent) (Developer Preview)</a></span>
+  <span class="next"><a href="../chapter4/index.html">AI Platform and Safety</a></span>
+</nav>
 </article>
   </div>
 </main>

@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Lab Environment :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <title>Al Safety with NeMo Guardrails (General Availability) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <link rel="prev" href="section2.html">
+    <link rel="next" href="section4.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
@@ -109,19 +111,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter4/index.html">AI Platform and Safety</a>
+    <a class="nav-link" href="index.html">AI Platform and Safety</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter4/section1.html">Al Hub - MCP Catalog (Developer Preview)</a>
+    <a class="nav-link" href="section1.html">Al Hub - MCP Catalog (Developer Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter4/section2.html">Centralized metrics and observability (Technology Preview)</a>
+    <a class="nav-link" href="section2.html">Centralized metrics and observability (Technology Preview)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="section3.html">Al Safety with NeMo Guardrails (General Availability)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter4/section3.html">Al Safety with NeMo Guardrails (General Availability)</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter4/section4.html">Adversarial Vulnerability Scanning with Garak Red Teaming (Technology Preview)</a>
+    <a class="nav-link" href="section4.html">Adversarial Vulnerability Scanning with Garak Red Teaming (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -156,7 +158,8 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></li>
-    <li><a href="index.html">Lab Environment</a></li>
+    <li><a href="index.html">AI Platform and Safety</a></li>
+    <li><a href="section3.html">Al Safety with NeMo Guardrails (General Availability)</a></li>
   </ul>
 </nav>
 </div>
@@ -165,80 +168,65 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Lab Environment</h1>
+<h1 class="page">Al Safety with NeMo Guardrails (General Availability)</h1>
 <div class="sect1">
-<h2 id="_instructions_to_launch_your_lab_on_the_red_hat_demo_platform_rhdp"><a class="anchor" href="#_instructions_to_launch_your_lab_on_the_red_hat_demo_platform_rhdp"></a>Instructions to Launch Your Lab on the Red Hat Demo Platform (RHDP)</h2>
+<h2 id="_what_is_it"><a class="anchor" href="#_what_is_it"></a>What is it?</h2>
 <div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Log in</strong> to the <a href="#RHDP-Portal-Links">RHDP portal</a></p>
-</li>
-<li>
-<p><strong>Search</strong> for the catalog entry: <strong>FIXME Lab Catalog Name</strong>.</p>
-</li>
-<li>
-<p><strong>Click</strong> on the catalog entry in the search results.</p>
-</li>
-<li>
-<p>On the catalog page, <strong>click</strong> the <strong>Order</strong> button.</p>
-</li>
-<li>
-<p><strong>Fill out</strong> the required details in the order form.</p>
-</li>
-<li>
-<p><strong>Review the warning</strong> at the bottom of the form and <strong>check the box</strong> labeled:<br>
-<strong>“I confirm that I understand the above warnings.”</strong></p>
-</li>
-<li>
-<p><strong>Click</strong> the <strong>Order</strong> button to place your lab order.</p>
-</li>
-</ol>
+<div class="paragraph">
+<p><strong>Al Safety with NeMo Guardrails</strong> is a comprehensive safety portfolio integrated with the <strong>TrustyAI Operator</strong>.
+It acts as a proactive safety layer between the application code and the LLM, enabling the detection, testing, and mitigation of risks—such as bias, hallucinations, and adversarial attacks—before and during production.</p>
 </div>
-<div class="sect2">
-<h3 id="_important_notes"><a class="anchor" href="#_important_notes"></a>Important Notes:</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_does_it_matter"><a class="anchor" href="#_why_does_it_matter"></a>Why does it matter?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>While traditional LLM evaluation focuses on static output quality, NeMo Guardrails provides Programmable Safety Flows. It matters because it offers:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>This lab may take approximately <strong>FIXME minutes</strong> to become ready.</p>
+<p><strong>Real-time Inline Filtering</strong>: Actively blocks toxic, biased, or off-topic content at the inference layer.</p>
 </li>
 <li>
-<p>You will receive an <strong>email with access details</strong> once your lab environment is ready.</p>
+<p><strong>Content Safeguarding</strong>: Detects and masks <strong>Personally Identifiable Information (PII)</strong> and filters profane language to maintain brand reputation.</p>
 </li>
 <li>
-<p>You can also <strong>retrieve lab access</strong> directly from the RHDP portal.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_how_to_access_your_lab_via_the_rhdp_portal"><a class="anchor" href="#_how_to_access_your_lab_via_the_rhdp_portal"></a>How to Access Your Lab via the RHDP Portal:</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>On the RHDP portal, <strong>click</strong> on the <strong>Services</strong> option in the left-hand menu.</p>
+<p><strong>Operational Flexibility</strong>: Unlike standard fixed guardrails, it uses <strong>Colang</strong> for programmable flows and allows for <strong>Custom Python Actions</strong> (using the @action decorator) to execute complex logic within the server pod.</p>
 </li>
 <li>
-<p><strong>Select your lab</strong> from the listings on the right-hand side of the page to view access details.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="RHDP-Portal-Links"><a class="anchor" href="#RHDP-Portal-Links"></a>RHDP Portal Links</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>RedHat associates: <a href="https://demo.redhat.com/" target="_blank" rel="noopener">https://demo.redhat.com/</a></p>
-</li>
-<li>
-<p>RedHat partners: <a href="https://partner.demo.redhat.com/" target="_blank" rel="noopener">https://partner.demo.redhat.com/</a></p>
+<p><strong>Prompt Injection Mitigation</strong>: Identifies and blocks malicious adversarial inputs specifically designed to bypass standard model  controls.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_how_to_use_it"><a class="anchor" href="#_how_to_use_it"></a>How to use it?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Infrastructure Setup</strong>: Create a <strong>ServiceAccount</strong>, <strong>RoleBinding</strong>, and <strong>Secret</strong> (containing an API token) in your namespace to authenticate model access.</p>
+</li>
+<li>
+<p><strong>Configuration</strong>: Define a <strong>ConfigMap</strong> containing your model details (config.yaml), safety flows (rails.co), and any custom Python detectors (actions.py).</p>
+</li>
+<li>
+<p><strong>Deployment</strong>: Create and deploy the <strong>NemoGuardrails</strong> Custom Resource (CR), which creates the service account, deployment, and route.</p>
+</li>
+<li>
+<p><strong>Validation</strong>: Test safety parameters within the <strong>GenAI Studio Playground</strong> iteratively. In production, send requests to the <strong>Guardrails Gateway</strong> via the OpenAI-compatible /v1/chat/completions endpoint.</p>
+</li>
+</ul>
 </div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="section2.html">Centralized metrics and observability (Technology Preview)</a></span>
+  <span class="next"><a href="section4.html">Adversarial Vulnerability Scanning with Garak Red Teaming (Technology Preview)</a></span>
+</nav>
 </article>
   </div>
 </main>

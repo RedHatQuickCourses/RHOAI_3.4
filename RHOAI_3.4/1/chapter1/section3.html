@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Speculative Decoding (General Availability) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <title>Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
     <link rel="prev" href="section2.html">
-    <link rel="next" href="../chapter2/index.html">
+    <link rel="next" href="section4.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
@@ -54,13 +54,16 @@
     <a class="nav-link" href="index.html">High-Performance Inference</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section1.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
+    <a class="nav-link" href="section1.html">Model-as-a-Service (MaaS) Integration (General Availability)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section2.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+    <a class="nav-link" href="section2.html">Distributed Inference with llm-d on xKS (Technology Preview)</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="section3.html">Speculative Decoding (General Availability)</a>
+    <a class="nav-link" href="section3.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section4.html">Speculative Decoding (General Availability)</a>
   </li>
 </ul>
   </li>
@@ -73,13 +76,16 @@
     <a class="nav-link" href="../chapter2/index.html">Data-Centric AI &amp; Evaluation</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
+    <a class="nav-link" href="../chapter2/section1.html">Core Evaluation Stack Control Plane - Eval Hub (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section2.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+    <a class="nav-link" href="../chapter2/section2.html">Automate RAG Optimization with AutoRAG (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section3.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
+    <a class="nav-link" href="../chapter2/section3.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter2/section4.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -92,7 +98,10 @@
     <a class="nav-link" href="../chapter3/index.html">The Agentic Era (AgentOps)</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter3/section1.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
+    <a class="nav-link" href="../chapter3/section1.html">Agent Core and AgentOps (Bring Your Own Agent) (Developer Preview)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter3/section2.html">GenAI Studio (Technology Preview) and Prompt Lab (General Availability)</a>
   </li>
 </ul>
   </li>
@@ -102,16 +111,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="#index.adoc">index.adoc</a>
+    <a class="nav-link" href="../chapter4/index.html">AI Platform and Safety</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section1.adoc">section1.adoc</a>
+    <a class="nav-link" href="../chapter4/section1.html">Al Hub - MCP Catalog (Developer Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section2.adoc">section2.adoc</a>
+    <a class="nav-link" href="../chapter4/section2.html">Centralized metrics and observability (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#section3.adoc">section3.adoc</a>
+    <a class="nav-link" href="../chapter4/section3.html">Al Safety with NeMo Guardrails (General Availability)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter4/section4.html">Adversarial Vulnerability Scanning with Garak Red Teaming (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -147,7 +159,7 @@
   <ul>
     <li><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></li>
     <li><a href="index.html">High-Performance Inference</a></li>
-    <li><a href="section3.html">Speculative Decoding (General Availability)</a></li>
+    <li><a href="section3.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a></li>
   </ul>
 </nav>
 </div>
@@ -156,48 +168,60 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Speculative Decoding (General Availability)</h1>
+<h1 class="page">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</h1>
+<div class="sect1">
+<h2 id="_what_is_it"><a class="anchor" href="#_what_is_it"></a>What is it?</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><strong>What is it?</strong></p>
+<p>The Workload Variant Autoscaler (WVA) is a Kubernetes controller that provides intelligent, inference-aware automatic scaling for llm-d model deployments. Unlike traditional autoscalers that rely on generic CPU or memory metrics, the WVA derives scaling decisions from inference-specific signals—specifically KV cache utilization and request queue length—to accurately reflect the GPU-bound state of the model server.</p>
 </div>
-<div class="paragraph">
-<p>Speculative decoding is an optimization technique that improves inference performance using the <strong>Speculators</strong> library (Technology Preview). It utilizes the <strong>Eagle 3</strong> algorithm, which pairs a small, single-layer <strong>draft model</strong> with a full-sized <strong>verifier model</strong> (the LLM being served). The draft model auto-regressively predicts several tokens, and the verifier model processes these tokens in parallel in a single forward pass.</p>
 </div>
-<div class="paragraph">
-<p><strong>Why does it matter?</strong></p>
 </div>
+<div class="sect1">
+<h2 id="_why_does_it_matter"><a class="anchor" href="#_why_does_it_matter"></a>Why does it matter?</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>It provides high-speed inference without compromising the integrity of the results. Key advantages include:</p>
+<p>Traditional metrics (CPU/RAM) do not represent the true load of LLM inference, leading to over-provisioning or performance degradation. The WVA addresses this through:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Throughput &amp; Latency</strong>: Effective throughput increases and latency decreases (often 2 to 3 times faster) because the verifier processes multiple tokens simultaneously.</p>
+<p><strong>Token-Level Demand Estimation</strong>: It computes demand based on tokens actively being processed (KV cache) and those waiting in the queue.</p>
 </li>
 <li>
-<p><strong>Output Quality</strong>: If the verifier rejects a predicted token, it samples a corrected one from its own distribution, ensuring the final output matches exactly what the verifier model would produce alone.</p>
+<p><strong>Saturation-Based Spare Capacity Model</strong>: It evaluates whether the current replica set has sufficient "spare capacity" to absorb traffic increases rather than waiting for full saturation.</p>
 </li>
 <li>
-<p><strong>Resource Efficiency</strong>: Eagle 3 draft models require minimal processing overhead due to their small size.</p>
+<p><strong>Hardware-Aware Optimization</strong>: It coordinates scaling across variants sharing a model identifier, scaling up the "cheapest" variant (e.g., A100 vs H100) first to optimize infrastructure costs.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>How to use it?</strong></p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_use_it"><a class="anchor" href="#_how_to_use_it"></a>How to use it?</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Deployment: Use <strong>podman</strong> to run the AI Inference Server image <strong>(vllm-cuda-rhel9)</strong> and specify a trained Eagle 3 model using the <strong>--model</strong> flag (e.g., <strong>RedHatAl/Qwen3-8B-speculator.eagle3</strong>).</p>
+<p><strong>Enable the Controller</strong>: You must first enable the WVA in the <strong>DataScienceCluster custom resource</strong>.</p>
 </li>
 <li>
-<p>Conversion: Use the Red Hat AI Model Optimization Toolkit to convert existing externally-trained Eagle 3 checkpoints into the Speculators format. This is done by cloning the <strong>speculators</strong> repository and running the <strong>apply_eagle3_eagle.sh</strong> script within the toolkit container.</p>
+<p><strong>Define Performance Triggers</strong>: Configure <strong>kvCacheThreshold</strong> and <strong>queueLengthThreshold</strong> within your <strong>LLMInferenceService</strong> configuration.</p>
+</li>
+<li>
+<p><strong>Actuation</strong>: The WVA writes the <strong>wva_desired_replicas</strong> metric to Prometheus, which KEDA then reads to actuate the Horizontal Pod Autoscaler (HPA).</p>
+</li>
+<li>
+<p><strong>Safety Features</strong>: The system includes a scale-down safety check that simulates load redistribution to prevent premature down-scaling, and skips variants with "pending" replicas to prevent over-provisioning during model loading.</p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="section2.html">Workload Variant Autoscaler (Inference-Aware Autoscaling) for llm-d Model Deployments (Developer Preview)</a></span>
-  <span class="next"><a href="../chapter2/index.html">Data-Centric AI &amp; Evaluation</a></span>
+  <span class="prev"><a href="section2.html">Distributed Inference with llm-d on xKS (Technology Preview)</a></span>
+  <span class="next"><a href="section4.html">Speculative Decoding (General Availability)</a></span>
 </nav>
 </article>
   </div>

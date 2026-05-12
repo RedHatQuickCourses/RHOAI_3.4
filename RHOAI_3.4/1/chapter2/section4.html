@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Lab Environment :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <title>MLflow Integration (General Availability) and Prompt Management (Technology Preview) :: Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</title>
+    <link rel="prev" href="section3.html">
+    <link rel="next" href="../chapter3/index.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
@@ -71,19 +73,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter2/index.html">Data-Centric AI &amp; Evaluation</a>
+    <a class="nav-link" href="index.html">Data-Centric AI &amp; Evaluation</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Core Evaluation Stack Control Plane - Eval Hub (Technology Preview)</a>
+    <a class="nav-link" href="section1.html">Core Evaluation Stack Control Plane - Eval Hub (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section2.html">Automate RAG Optimization with AutoRAG (Technology Preview)</a>
+    <a class="nav-link" href="section2.html">Automate RAG Optimization with AutoRAG (Technology Preview)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section3.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
+    <a class="nav-link" href="section3.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section4.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="section4.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a>
   </li>
 </ul>
   </li>
@@ -156,7 +158,8 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Red Hat OpenShift AI (RHOAI) 3.4: New Key Features</a></li>
-    <li><a href="index.html">Lab Environment</a></li>
+    <li><a href="index.html">Data-Centric AI &amp; Evaluation</a></li>
+    <li><a href="section4.html">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</a></li>
   </ul>
 </nav>
 </div>
@@ -165,80 +168,64 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Lab Environment</h1>
+<h1 class="page">MLflow Integration (General Availability) and Prompt Management (Technology Preview)</h1>
 <div class="sect1">
-<h2 id="_instructions_to_launch_your_lab_on_the_red_hat_demo_platform_rhdp"><a class="anchor" href="#_instructions_to_launch_your_lab_on_the_red_hat_demo_platform_rhdp"></a>Instructions to Launch Your Lab on the Red Hat Demo Platform (RHDP)</h2>
+<h2 id="_what_is_it"><a class="anchor" href="#_what_is_it"></a>What is it?</h2>
 <div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Log in</strong> to the <a href="#RHDP-Portal-Links">RHDP portal</a></p>
-</li>
-<li>
-<p><strong>Search</strong> for the catalog entry: <strong>FIXME Lab Catalog Name</strong>.</p>
-</li>
-<li>
-<p><strong>Click</strong> on the catalog entry in the search results.</p>
-</li>
-<li>
-<p>On the catalog page, <strong>click</strong> the <strong>Order</strong> button.</p>
-</li>
-<li>
-<p><strong>Fill out</strong> the required details in the order form.</p>
-</li>
-<li>
-<p><strong>Review the warning</strong> at the bottom of the form and <strong>check the box</strong> labeled:<br>
-<strong>“I confirm that I understand the above warnings.”</strong></p>
-</li>
-<li>
-<p><strong>Click</strong> the <strong>Order</strong> button to place your lab order.</p>
-</li>
-</ol>
+<div class="paragraph">
+<p><strong>MLflow Integration</strong> is a first-class component of RHOAI that provides centralized Machine Learning (ML) lifecycle management. It acts as a unified mechanism to track experiments, parameters, metrics, and artifacts across various RHOAI tools.</p>
 </div>
-<div class="sect2">
-<h3 id="_important_notes"><a class="anchor" href="#_important_notes"></a>Important Notes:</h3>
+<div class="paragraph">
+<p><strong>Prompt Management</strong> is a feature that allows you to save system instructions that produce effective results in the playground as named prompts for reuse across sessions, stored in the MLflow prompt registry.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_does_it_matter"><a class="anchor" href="#_why_does_it_matter"></a>Why does it matter?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Data scientists and ML engineers using disparate components—such as <strong>AI Pipelines, Notebooks, Workbenches, KubeRay, custom components, Ray, and the Training SDK</strong>—require a single source of truth for experiment tracking.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>This lab may take approximately <strong>FIXME minutes</strong> to become ready.</p>
+<p><strong>Centralized Lifecycle Management</strong>: Embedding MLflow directly within the user&#8217;s primary OpenShift AI workspace reduces context switching and improves user experience.</p>
 </li>
 <li>
-<p>You will receive an <strong>email with access details</strong> once your lab environment is ready.</p>
+<p><strong>Experiment Traceability</strong>: Allows users to track and compare parameters and metrics to make informed decisions about model performance.</p>
 </li>
 <li>
-<p>You can also <strong>retrieve lab access</strong> directly from the RHDP portal.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_how_to_access_your_lab_via_the_rhdp_portal"><a class="anchor" href="#_how_to_access_your_lab_via_the_rhdp_portal"></a>How to Access Your Lab via the RHDP Portal:</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>On the RHDP portal, <strong>click</strong> on the <strong>Services</strong> option in the left-hand menu.</p>
-</li>
-<li>
-<p><strong>Select your lab</strong> from the listings on the right-hand side of the page to view access details.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="RHDP-Portal-Links"><a class="anchor" href="#RHDP-Portal-Links"></a>RHDP Portal Links</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>RedHat associates: <a href="https://demo.redhat.com/" target="_blank" rel="noopener">https://demo.redhat.com/</a></p>
-</li>
-<li>
-<p>RedHat partners: <a href="https://partner.demo.redhat.com/" target="_blank" rel="noopener">https://partner.demo.redhat.com/</a></p>
+<p><strong>Instruction Standardization</strong>: Prompt Management allows team members to standardize on instructions that work well for specific use cases, tracking refinements through automatic versioning so you can return to earlier versions if needed.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_how_to_use_it"><a class="anchor" href="#_how_to_use_it"></a>How to use it?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>View Experiments and Runs:</strong> Access the MLflow dashboard directly within OpenShift AI to monitor all ongoing and past AI experiments.</p>
+</li>
+<li>
+<p><strong>Compare MLflow Runs:</strong> Use the comparison feature in the dashboard to evaluate different runs side-by-side and determine which parameters yielded the best model performance.</p>
+</li>
+<li>
+<p><strong>Save a Prompt:</strong> From the <strong>Gen AI studio Playground</strong>, click the <strong>Prompt tab</strong> in the chatbot settings panel. Write your system instructions, click <strong>Save</strong>, and enter a name.</p>
+</li>
+<li>
+<p><strong>Reuse Prompts:</strong> Manage saved prompts via the <strong>Prompts page</strong> under Gen AI studio. To load a prompt, click <strong>Load Prompt</strong> in the playground settings, filter by name, select a version, and click <strong>Load in Playground</strong>.</p>
+</li>
+</ul>
 </div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="section3.html">Automate Machine Learning Model Training with AutoML (Technology Preview)</a></span>
+  <span class="next"><a href="../chapter3/index.html">The Agentic Era (AgentOps)</a></span>
+</nav>
 </article>
   </div>
 </main>
