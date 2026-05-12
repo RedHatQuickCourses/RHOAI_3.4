@@ -8,10 +8,10 @@ This feature extends enterprise-grade LLM inference serving beyond OpenShift to 
 
 It provides "Architecture Freedom," enabling teams to serve massive foundation models without vendor lock-in to OpenShift-only deployment methods. Technical pillars include:
 
-- Prefill-decode Disaggregation: Separates prompt processing from token generation, allowing each phase to scale independently for optimal performance.
-- Intelligent Scheduling & KV Cache Management: Optimizes resource usage and reduces memory requirements, enabling much longer context windows.
-- Wide Expert Parallelism: Efficiently handles Mixture of Experts (MoE) models across many GPU nodes.
-- Secure by Design: Inter-component communication is secured using mTLS with certificate rotation, with all components running under minimal required permissions.
+- *Prefill-decode Disaggregation*: Separates prompt processing from token generation, allowing each phase to scale independently for optimal performance.
+- *Intelligent Scheduling & KV Cache Management*: Optimizes resource usage and reduces memory requirements, enabling much longer context windows.
+- *Wide Expert Parallelism*: Efficiently handles Mixture of Experts (MoE) models across many GPU nodes.
+- *Secure by Design*: Inter-component communication is secured using mTLS with certificate rotation, with all components running under minimal required permissions.
 
 == How to use it?
 
